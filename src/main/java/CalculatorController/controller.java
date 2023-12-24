@@ -25,7 +25,7 @@ public class controller {
     @GetMapping("/calculator/minus")
     public String minus (@RequestParam Integer num1, @RequestParam Integer num2){
         if (num1 == null || num2 == null) {
-            return "Один из аргументов не передан ";
+            return "Один из аргументов не передан ! ";
         }
         return num1 + " - " + num2 + "=" + service.minus(num1, num2);
 
