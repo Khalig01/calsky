@@ -23,7 +23,7 @@ public class controller {
 
     }
     @GetMapping("/calculator/minus")
-    public String minus (@RequestParam Integer num1, @RequestParam Integer num2){
+    public String minus (@RequestParam(required = false) Integer num1, @RequestParam(required = false) Integer num2){
         if (num1 == null || num2 == null) {
             return "Один из аргументов не передан ! ";
         }
